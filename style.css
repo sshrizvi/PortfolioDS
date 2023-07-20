@@ -227,3 +227,31 @@ li, a{
     min-width: 320px;
     max-width: 665px;
 }
+
+/* --------------- ABOUT ME SECTION CSS --------------- */
+
+.about-section{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.about-container{
+    margin: 100px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content{
+    width: 320px;
+}
+
+.about-image img{
+    width: 320px; 
+    border-radius: 25px;
+}
+
+.about-image{
+    border-radius: 50px;
+}
