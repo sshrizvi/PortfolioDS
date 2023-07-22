@@ -1,0 +1,538 @@
+/* --------------- PREDEFINED VARIABLES --------------- */
+
+:root{
+    --bg-color : #0d1b2a;
+    --text-color : #e0e1dd;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* --------------- ANIMATIONS --------------- */
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+/* --------------- UNIVERSAL CSS --------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    color: var(--text-color);
+}
+
+body{
+    background-color: var(--bg-color) ;
+}
+
+/* --------------- NAVBAR CSS ---------------- */
+
+nav, .left-nav, ul, .right-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+nav{
+    justify-content: space-between;
+    padding: 25px 50px 0 50px;
+}
+
+.left-nav, .right-nav{
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    gap: 25px;
+}
+
+.logo{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+}
+
+#active-btn{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/* --------------- HERO SECTION CSS --------------- */
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-text h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.hero-text p{
+    text-align: center;
+}
+
+.hero-text button{
+    border-radius: 25px;
+    background-color: #163250;
+    border-color: var(--text-color);
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.hero-image img{
+    animation: floating 3s ease-in-out infinite;
+    margin-top: -50px;
+}
+
+/* --------------- MY WORK SECTION CSS --------------- */
+
+.mywork-section{
+    height : 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle1{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #f39740;
+    border-radius: 50%;
+    z-index: -1;
+    right: 0;
+    top: 0;
+}
+
+.circle2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #f34040;
+    border-radius: 50%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.blur{
+    filter: blur(100px);
+}
+
+.mywork-section > h1{
+    text-align: center;
+    padding: 50px 0 25px 0;
+}
+
+.swiper {
+    width: 1020px;
+    height: auto;
+    /* background-color: red; */
+    border-radius: 15px;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 320px;
+    background-color: #163250;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image>img{
+    width: 70%;
+}
+
+.card-text>p{
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.card button{
+    border-radius: 25px;
+    background-color: var(--bg-color);
+    border-color: var(--text-color);
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* --------------- EDUCATION SECTION CSS --------------- */
+
+.education-section{
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.section-title{
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    gap: 50px;
+}
+
+.milestone-icon{
+    width: 70px;
+    height: 100px;
+    background-color: #e0e1dd;
+    border-radius: 50px 50px 0 0;
+    transition: all 0.2s ease-in-out 0.2s;
+}
+
+.milestone-icon:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transform: translateY(-10px);
+}
+
+.milestone-icon h2{
+    color: black;
+    text-align: center;
+}
+
+.milestone-icon-upper{
+    width: 70px;
+    height: 50px;
+    background-color: #f39740;
+    border-radius: 50px 50px 0 0;
+}
+
+.milestone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: 320px;
+    max-width: 665px;
+}
+
+/* --------------- ABOUT ME SECTION CSS --------------- */
+
+.about-section{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+.about-container{
+    margin: 100px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.about-content, .about-image{
+    width: 320px;
+    height: 320px;
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-image img{
+    width: 320px; 
+}
+
+.about-image{
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* --------------- ABOUT ME SECTION CSS --------------- */
+
+.contact-section{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 0 0;
+    gap: 50px;
+}
+
+.contact-box{
+    min-width: 300px;
+    background-color: #163250;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.email{
+    color: #bdbdbd;
+    font-size: 12px;
+}
+
+.contact-box button{
+    border-radius: 25px;
+    background-color: var(--bg-color);
+    border-color: var(--text-color);
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type=text],
+input[type=email]{
+    min-width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 0 0 0 15px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    appearance: none;
+}
+
+textarea{
+    min-width: 300px;
+    border-radius: 15px;
+    padding: 15px 0 0 15px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    resize: none;
+}
+
+form button{
+    border-radius: 25px;
+    background-color: #163250;
+    border-color: var(--text-color);
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+/* --------------- FOOTER SECTION CSS --------------- */
+
+footer{
+    width: 100vw;
+    margin: 50px 0 0 0;
+    background-color: #163250;
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo .logo{
+    margin: 0;
+}
+
+.footer-logo h1{
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------- RESPONSIVE MEDIA QUERIES ------------------------- */
+
+
+@media (max-width: 600px){
+    
+    /* ---------- NAVBAR CSS ---------- */
+
+    nav{
+        width: 100vw;
+        height: 60px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding: 25px 25px 0 25px;
+    }
+    
+    .logo{
+        width: 3rem;
+        border-radius: 50%;
+    }
+
+    .right-nav{
+        display: none;
+    }
+
+    .left-nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ---------- HERO SECTION CSS ---------- */
+
+    .hero-section{
+        height: calc(100vh - 60px);        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero-text{
+        margin-top: -4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero-text h1{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .hero-text p{
+        width: 80vw;
+        text-align: center;
+    }
+
+    .hero-text button{
+        border-radius: 25px;
+        background-color: #163250;
+        border-color: var(--text-color);
+        padding: 10px 15px 10px 15px;
+        cursor: pointer;
+    }
+    
+    .hero-image img{
+        animation: floating 3s ease-in-out infinite;
+        width: 20rem;
+    }
+
+    /* ---------- WORK SECTION CSS ---------- */
+
+    .mywork-section{
+        width: 100vw;
+    }
+
+    .swiper {
+        width: 320px;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .circle1, .circle2{
+        width: 100px;
+        height: 100px;
+    }
+
+    .blur{
+        filter: blur(50px);
+    }
+
+    /* ---------- EDUCATION SECTION CSS ---------- */
+
+    .milestone-text{
+        width: 65%;
+    }
+
+    /* ---------- ABOUT ME SECTION CSS ---------- */
+
+    .about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+        margin: 1.5rem 0 0 0;
+    }
+
+    /* ---------- ABOUT ME SECTION CSS ---------- */
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0 0 0;
+        gap: 50px;
+    }
+
+    /* ---------- FOOTER SECTION CSS ---------- */
+
+    .footer-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
